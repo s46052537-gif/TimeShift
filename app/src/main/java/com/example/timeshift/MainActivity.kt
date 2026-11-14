@@ -19,6 +19,7 @@ import android.widget.LinearLayout
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.webkit.ScriptHandler
 import androidx.webkit.WebViewCompat
 import androidx.webkit.WebViewFeature
 
@@ -31,7 +32,7 @@ class MainActivity : Activity() {
 
     private var speed = 1
     private var totalOffsetMs = 0L
-    private var scriptHandler: WebViewCompat.ScriptHandler? = null
+    private var scriptHandler: ScriptHandler? = null
     private val supportsDocStart by lazy {
         WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)
     }
